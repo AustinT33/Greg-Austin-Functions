@@ -13,6 +13,10 @@ function createGreeting (name,age) {
     throw new Error('Arguments not valid');
   if (yourAge === undefined)
     throw new Error('Arguments not valid');
+  if (typeof(yourName) !== String)
+    throw new TypeError();
+  if (typeof(yourAge) !== Number)
+    throw new TypeError();
   let yob = YearOfBirth(yourAge);
   return(`Hi, my name is ${yourName} and I'm ${yourAge} years old, I was born in ${yob}`);
 }
